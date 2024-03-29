@@ -1,4 +1,9 @@
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Outlet,
+  RouterProvider,
+  Navigate,
+} from "react-router-dom";
 import "./App.scss";
 import Register from "./register/Register";
 import Login from "./login/Login";
@@ -9,6 +14,15 @@ import Home from "./home/Home";
 import Profile from "./profile/Profile";
 
 function App() {
+  const currentUser = false;
+
+  const ProtectedRoute = (children) => {
+    if (!currentUser) {
+      return <Navigate to="/login" />;
+    }
+    return children;
+  };
+
   const Layout = () => {
     return (
       <div>
@@ -26,7 +40,11 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Layout />,
+      element: (
+        <ProtectedRoute>
+          <Layout />
+        </ProtectedRoute>
+      ),
       children: [
         {
           path: "/",
