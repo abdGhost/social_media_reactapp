@@ -50,9 +50,8 @@ const Rightbar = () => {
                 <span>John Doe </span>
                 changed their cover picture
               </p>
+              <p>1 min ago</p>
             </div>
-
-            <p>1 min ago</p>
           </div>
 
           <div className="user">
@@ -65,9 +64,8 @@ const Rightbar = () => {
                 <span>John Doe </span>
                 changed their cover picture
               </p>
+              <p>1 min ago</p>
             </div>
-
-            <p>1 min ago</p>
           </div>
 
           <div className="user">
@@ -80,9 +78,8 @@ const Rightbar = () => {
                 <span>John Doe </span>
                 changed their cover picture
               </p>
+              <p>1 min ago</p>
             </div>
-
-            <p>1 min ago</p>
           </div>
 
           <div className="user">
@@ -95,9 +92,8 @@ const Rightbar = () => {
                 <span>John Doe </span>
                 changed their cover picture
               </p>
+              <p>1 min ago</p>
             </div>
-
-            <p>1 min ago</p>
           </div>
         </div>
 
