@@ -13,13 +13,12 @@ import Rightbar from "./components/rightbar/Rightbar";
 import Home from "./home/Home";
 import Profile from "./profile/Profile";
 import PropTypes from "prop-types";
+import "./style.scss";
 
 function App() {
-  // const currentUser = true;
-
   const Layout = () => {
     return (
-      <div>
+      <div className="theme-dark">
         <Navbar />
         <div style={{ display: "flex" }}>
           <Leftbar />
@@ -41,8 +40,8 @@ function App() {
   };
 
   ProtectedRoute.propTypes = {
-    children: PropTypes.node, // Validate children as a renderable node
-    currentUser: PropTypes.object, // Validate currentUser as an object (or any appropriate type)
+    children: PropTypes.node,
+    currentUser: PropTypes.object,
   };
 
   //Routers
