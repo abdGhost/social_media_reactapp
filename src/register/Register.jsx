@@ -1,11 +1,11 @@
-import "./login.scss";
+import "./register.scss";
 
-const Login = () => {
+const Register = () => {
   return (
-    <div className="login">
+    <div className="register">
       <div className="card">
         <div className="left">
-          <h1>Hello World.</h1>
+          <h1>Ghost Social.</h1>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the standard dummy text ever since
@@ -14,15 +14,17 @@ const Login = () => {
             five centuries, but also the leap into electronic typesetting,
             remaining essentially unchanged.
           </p>
-          <span>{`Don't you have account?`}</span>
-          <button>Register</button>
+          <span>{`Do you have account?`}</span>
+          <button>Login</button>
         </div>
         <div className="right">
-          <h1>Login</h1>
+          <h1>Register</h1>
           <form>
             <input type="text" placeholder="Username" />
+            <input type="email" placeholder="Email" />
             <input type="password" placeholder="Password" />
-            <button>Login</button>
+            <input type="text" placeholder="Name" />
+            <button>Register</button>
           </form>
         </div>
       </div>
@@ -30,4 +32,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
