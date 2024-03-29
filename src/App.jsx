@@ -16,13 +16,6 @@ import Profile from "./profile/Profile";
 function App() {
   const currentUser = false;
 
-  const ProtectedRoute = (children) => {
-    if (!currentUser) {
-      return <Navigate to="/login" />;
-    }
-    return children;
-  };
-
   const Layout = () => {
     return (
       <div>
@@ -34,6 +27,13 @@ function App() {
         </div>
       </div>
     );
+  };
+
+  const ProtectedRoute = (children) => {
+    if (!currentUser) {
+      return <Navigate to="/login" />;
+    }
+    return children;
   };
 
   //Routers
