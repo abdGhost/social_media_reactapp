@@ -12,9 +12,10 @@ import Leftbar from "./components/leftbar/Leftbar";
 import Rightbar from "./components/rightbar/Rightbar";
 import Home from "./home/Home";
 import Profile from "./profile/Profile";
+import PropTypes from "prop-types";
 
 function App() {
-  const currentUser = false;
+  // const currentUser = true;
 
   const Layout = () => {
     return (
@@ -22,18 +23,26 @@ function App() {
         <Navbar />
         <div style={{ display: "flex" }}>
           <Leftbar />
-          <Outlet />
+          <div style={{ flex: 6 }}>
+            <Outlet />
+          </div>
+
           <Rightbar />
         </div>
       </div>
     );
   };
 
-  const ProtectedRoute = (children) => {
+  const ProtectedRoute = ({ children, currentUser = true }) => {
     if (!currentUser) {
       return <Navigate to="/login" />;
     }
     return children;
+  };
+
+  ProtectedRoute.propTypes = {
+    children: PropTypes.node, // Validate children as a renderable node
+    currentUser: PropTypes.object, // Validate currentUser as an object (or any appropriate type)
   };
 
   //Routers
